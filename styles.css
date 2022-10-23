@@ -18,11 +18,12 @@ body {
 main {
     max-width: 375px;
     width: 100%;
+    margin: auto;
 }
 
 .containerOuterEdge {
-    width: 80vw;
-    height: 75vh;
+    width: 80%;
+    height: 75%;
     margin: auto;
     margin-top: 40px;
     background-color: hsl(216, 50%, 16%);
@@ -38,7 +39,31 @@ main {
 /* HERE COMES THE INDIVIDUAL SETTINGS */
 
 /* THE IMAGE */
-.containerInnerEdge img {
+.containerImage {
+    position: relative;
+}
+
+.containerImageHover {
+    position: absolute;
+    width: 252px;
+    height: 252px;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid white; */
+    background-color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8px;
+}
+
+.containerImageHover:hover {
+    opacity: 0.5;
+}
+
+.containerImage img:nth-child(2) {
     width: 100%;
     border-radius: 8px;
 }
@@ -47,6 +72,15 @@ main {
 h1 {
     color: hsl(0, 0%, 100%);
     font-size: 1.25rem;
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 a:hover {
+    color: hsl(178, 100%, 50%);
 }
 
 /* THE DESCRIPTION */
@@ -117,4 +151,8 @@ hr {
 .creatorInfo a {
     text-decoration: none;
     color: white;
+}
+
+.creatorInfo a:hover {
+    color: hsl(178, 100%, 50%);
 }
